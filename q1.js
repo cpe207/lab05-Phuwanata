@@ -1,12 +1,18 @@
+// assign interface/type to the function definition properly
 function buyItem(hero, shop) {
-    if (hero.gold > shop.price) {
-        hero.item.push(shop.item);
+    /* Your code here */
+    if (hero.gold >= shop.price) {
         hero.gold -= shop.price;
+        hero.items.push(shop.item);
+        return hero;
     }
-    return hero;
+    else {
+        return hero;
+    }
 }
+//Test cases : assign proper type/interface to all objects
 var hero1 = {
-    item: ["sword", "potion"],
+    items: ["sword", "potion"],
     gold: 50,
 };
 var shop1 = {
@@ -14,7 +20,7 @@ var shop1 = {
     price: 20,
 };
 var hero2 = {
-    item: ["sword", "potion"],
+    items: ["sword", "potion"],
     gold: 50,
 };
 var shop2 = {
